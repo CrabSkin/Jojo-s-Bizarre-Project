@@ -1,12 +1,14 @@
-# Jojo_project
+# Jojo's Bizzare Project
 
 ## Introduction
 
 Among the stories with which I have most connected, the Jojo's Bizarre Adventure (1987) franchise holds a dear place in my heart. With its sense of humor, pacing, action, characters, and world, this anthology anime has taken me as a viewer from laughter, tears, and glory in the blink of an eye.
-![imagen 1]
+
+<img src="JJP/image1.jpg" width="600" height="300">
 
 Within its worldbuilding, "Stands," introduced in Part 3 of the series (1989), are the magic/power system that the characters, whether heroes or villains, preferentially possess. These beings are defined as "physical manifestations of a person's life energy" (the Stand user). They have diverse appearances, but are still categorized into 5 types: Natural Humanoid (NH), Artificial Humanoid (AH), Natural Non-Humanoid (NNH), Artificial Non-Humanoid (ANH), and Phenomenon (PH).
-![imagen 2](URL_DE_LA_IMAGEN_2)
+
+<img src="JJP/image2.jpeg" width="600" height="300">
 
 Furthermore, their abilities are reflected in superpowers as varied as the brilliant mind of their author allows, but in turn, these can be summarized into 6 conventional parameters: Destructive Power (PWR), Speed (SPD), Range (RNG), Stamina (STA), Perception (PRC), Development Potential (DEV).
 
@@ -39,7 +41,8 @@ In this way, and in light of the more than 30 years that the franchise has exist
 ## Database
 
 First, I downloaded a database of the stands with official statistics to date from [Kaggle.com](https://www.kaggle.com/). It contains 156 records. Then, using the Wikis "JoJo's Bizarre Encyclopedia" and "JOJOPEDIA," I loaded variables such as the season where the Stand was shown (series\_part), user gender (user\_gender), user affiliation (user\_affiliation), and stand form (stand\_form).
-![imagen 3](URL_DE_LA_IMAGEN_3)
+
+<img src="JJP/image3.png" width="1000" height="100">
 
 ## Cleaning and Transformation
 
@@ -58,7 +61,7 @@ Only the following were added:
 * Stands exclusively with statistics: A, B, C, D, E, and None. Those with "Infinite" level statistics are not included because they cannot be transformed into numerical values.
 * Repeated Stands, as their statistical expression varies according to the series\_part, technically making them distinct Stands.
 
-![imagen 4](URL_DE_LA_IMAGEN_4)
+<img src="JJP/image4.png" width="400" height="200">
 
 ## Analysis and Results
 
@@ -158,6 +161,8 @@ FROM
 
     </details>
 
+<img src="JJP/chart1.png" width="300" height="300">
+
 2.  **User Gender**
 
     As expected from a Shonen manga, a substantial percentage of the Stands belong to male characters (M) (85.1%).
@@ -175,6 +180,8 @@ FROM
     ```
 
     </details>
+    
+<img src="JJP/chart2.png">
 
 3.  **User Affiliation**
 
@@ -194,6 +201,8 @@ FROM
 
     </details>
 
+<img src="JJP/chart3.png">
+
 4.  **Stand Form**
 
     <details>
@@ -207,42 +216,53 @@ FROM
         stand_formORDER BY
         Percentage DESC;
     ```
-
     </details>
 
-    There is a predominance of Stands with the form of Artificial Human (AH) (28.4%). Meanwhile, Stands with the form of Phenomena (PH) are the least frequent (12.8%).
 
-    This design decision may stem from the fact that humanoid Stands (Artificial or Natural) can be more appealing and relatable to the viewer, and conversely, the opposite may be true for phenomenon-type Stands.
+<img src="JJP/chart4.png">
+
+   
+   There is a predominance of Stands with the form of Artificial Human (AH) (28.4%). Meanwhile, Stands with the form of Phenomena (PH) are the least frequent (12.8%).
+   This design decision may stem from the fact that humanoid Stands (Artificial or Natural) can be more appealing and relatable to the viewer, and conversely, the opposite may be true for phenomenon-type Stands.
 
 ### **Relationships**
 
 * **Stats and Season**
 
-    (Is there a trend in the skill levels of the Stands across the seasons?)
+   (Is there a trend in the skill levels of the Stands across the seasons?)
 
-    The results, as shown in the graphs and summarized in the table, suggest that the highest averages for each statistic are distributed among parts 4, 5, and 6 as follows:
+  The results, as shown in the graphs and summarized in the table, suggest that the highest averages for each statistic are distributed among parts 4, 5, and 6 as follows:
+  * The Stands from part 4 have the highest Stamina and Development Potential on average.
+  * Part 5 has the highest average levels of Power and Speed.
+  * In part 6, the Stands have the highest average Range and Perception.
 
-    * The Stands from part 4 have the highest Stamina and Development Potential on average.
-    * Part 5 has the highest average levels of Power and Speed.
-    * In part 6, the Stands have the highest average Range and Perception.
+      <img src="JJP/table1.png" width="200" height="150">
+ 
+  <img src="JJP/chart5.png"  width="450" height="600">
 
 * **Form and Affiliation**
 
-    Is there a Stand form that is more common among certain types of users (e.g., allies vs. antagonists)?
+   Is there a Stand form that is more common among certain types of users (e.g., allies vs. antagonists)?
 
-    It was found that Antagonist Stands tend to have an Artificial Humanoid form (15.60% of the total) more than other forms. A similar trend occurs with Ally Stands, which predominantly have an Artificial Humanoid form (9.93% of the total), although they also present Natural Humanoid forms at the same frequency (9.93%).
+  It was found that Antagonist Stands tend to have an Artificial Humanoid form (15.60% of the total) more than other forms. A similar trend occurs with Ally Stands, which predominantly have an Artificial Humanoid form (9.93% of the total), although they also present Natural Humanoid forms at the same frequency (9.93%).
+
+<img src="JJP/chart6.png" width="450" height="490">
 
 * **Correlations Between Stats**
 
-    Is there any correlation between the stats?
+   Is there any correlation between the stats?
 
-    Investigating whether there are stats that tend to occur together, I first analyzed if the distribution of the stats was normal, which would not be expected for non-natural but manufactured data. It was not.
+  Investigating whether there are stats that tend to occur together, I first analyzed if the distribution of the stats was normal, which would not be expected for non-natural but manufactured data. It was not.
+  
+<img src="JJP/table2.png" width="400" height="150">
 
-    In terms of significant correlations, I found the following:
+   In terms of significant correlations, I found the following:
 
-    * Stands with high levels of Power tend to have high levels of Speed and Development Potential.
-    * High levels of Speed and Development Potential also tend to occur together.
-    * Stands with higher levels of Development Potential also tend to have high levels in Perception.
+ * Stands with high levels of Power tend to have high levels of Speed and Development Potential.
+ * High levels of Speed and Development Potential also tend to occur together.
+ * Stands with higher levels of Development Potential also tend to have high levels in Perception.
+    
+<img src="JJP/table3.png" width="460" height="330">
 
 ### **Recommendations**
 
@@ -256,4 +276,5 @@ It was considered to add the variable "stand\_ability." It is recommended to loa
 
 3. [JoJopedia - Wiki en español de JoJo's Bizarre Adventure](https://jojo.fandom.com/es/wiki/JoJopedia)
 
-![Texto alternativo](https://i.pinimg.com/736x/32/eb/e9/32ebe9a90e3a0f4963547e80512f8774.jpg)
+<img src="https://i.pinimg.com/736x/32/eb/e9/32ebe9a90e3a0f4963547e80512f8774.jpg" width="600" height="300">
+
