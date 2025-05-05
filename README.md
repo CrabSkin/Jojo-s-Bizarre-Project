@@ -1,14 +1,19 @@
 # Jojo's Bizzare Project
 
+
 ## Introduction
 
 Among the stories with which I have most connected, the Jojo's Bizarre Adventure (1987) franchise holds a dear place in my heart. With its sense of humor, pacing, action, characters, and world, this anthology anime has taken me as a viewer from laughter, tears, and glory in the blink of an eye.
 
-<img src="JJP/image1.jpg" width="600" height="300">
+<div align="center">
+  <img src="JJP/image1.jpg" width="600" height="300">
+</div>
 
 Within its worldbuilding, "Stands," introduced in Part 3 of the series (1989), are the magic/power system that the characters, whether heroes or villains, preferentially possess. These beings are defined as "physical manifestations of a person's life energy" (the Stand user). They have diverse appearances, but are still categorized into 5 types: Natural Humanoid (NH), Artificial Humanoid (AH), Natural Non-Humanoid (NNH), Artificial Non-Humanoid (ANH), and Phenomenon (PH).
 
+<div align="center">
 <img src="JJP/image2.jpeg" width="600" height="300">
+</div>
 
 Furthermore, their abilities are reflected in superpowers as varied as the brilliant mind of their author allows, but in turn, these can be summarized into 6 conventional parameters: Destructive Power (PWR), Speed (SPD), Range (RNG), Stamina (STA), Perception (PRC), Development Potential (DEV).
 
@@ -42,7 +47,7 @@ In this way, and in light of the more than 30 years that the franchise has exist
 
 First, I downloaded a database of the stands with official statistics to date from [Kaggle.com](https://www.kaggle.com/). It contains 156 records. Then, using the Wikis "JoJo's Bizarre Encyclopedia" and "JOJOPEDIA," I loaded variables such as the season where the Stand was shown (series\_part), user gender (user\_gender), user affiliation (user\_affiliation), and stand form (stand\_form).
 
-<img src="JJP/image3.png" width="1000" height="100">
+<img src="JJP/image3.png" width="800" height="100">
 
 ## Cleaning and Transformation
 
@@ -61,7 +66,7 @@ Only the following were added:
 * Stands exclusively with statistics: A, B, C, D, E, and None. Those with "Infinite" level statistics are not included because they cannot be transformed into numerical values.
 * Repeated Stands, as their statistical expression varies according to the series\_part, technically making them distinct Stands.
 
-<img src="JJP/image4.png" width="400" height="200">
+<img src="JJP/image4.png" width="300" height="150">
 
 ## Analysis and Results
 
@@ -225,7 +230,7 @@ FROM
    There is a predominance of Stands with the form of Artificial Human (AH) (28.4%). Meanwhile, Stands with the form of Phenomena (PH) are the least frequent (12.8%).
    This design decision may stem from the fact that humanoid Stands (Artificial or Natural) can be more appealing and relatable to the viewer, and conversely, the opposite may be true for phenomenon-type Stands.
 
-### **Relationships**
+## **Relationships**
 
 * **Stats and Season**
 
@@ -236,9 +241,10 @@ FROM
   * Part 5 has the highest average levels of Power and Speed.
   * In part 6, the Stands have the highest average Range and Perception.
 
-      <img src="JJP/table1.png" width="200" height="150">
+      <img src="JJP/table1.png" width="200" height="120">
+      
  
-  <img src="JJP/chart5.png"  width="450" height="600">
+  <img src="JJP/chart5.png"  width="450" height="550">
 
 * **Form and Affiliation**
 
@@ -264,11 +270,11 @@ FROM
     
 <img src="JJP/table3.png" width="460" height="330">
 
-### **Recommendations**
+## **Recommendations**
 
 It was considered to add the variable "stand\_ability." It is recommended to load such information to improve the database.
 
-### **References**
+## **References**
 
 1. [Kaggle Jojo´s Dataset](https://www.kaggle.com/datasets/dsfelix/jojo-stands-stats/data?select=jojo-stands.csv)
 
